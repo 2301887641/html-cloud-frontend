@@ -11,12 +11,16 @@
 			body{
 				background-color:#fafafa;
 			}
+
 			li{
 				list-style-type:none;
 			}
 			a{
 				text-decoration: none;
+				color:#fff
 			}
+ 			.clearfix:after {  content: ""; display: block; height: 0; clear: both; visibility: hidden;  }   
+
 			.header{
 				height:100px;
 				background-color:#fff;
@@ -49,18 +53,17 @@
 				height:620px;
 				background: url(images/banner.png) no-repeat top center;
 			}
-			.service{
+			.service,.case,.media{
 				width:1055px;
 				margin-top:50px;
 				margin-left: auto;
 				margin-right:auto;
-				height:740px;
 			}
-			.service .service_head{
+			.service .service_head,.case .service_head,.media .service_head{
 				border-top: 1px solid #ccc;
 				margin:0 26px;
 			}
-			.service .service_head h2{
+			.service .service_head h2,.case .service_head h2,.media .service_head h2{
 				width:167px;
 				height:59px;
 				margin-left:auto;
@@ -121,6 +124,123 @@
 				background:#ff9412;
 				color:#fff;
 			}
+			.case .casebottom{
+				width:1052px;
+				height:212px;
+				margin-left:auto;
+				margin-right:auto;
+				margin-top:30px;
+				position:relative;
+			}
+			.case .casebottom ul{
+				height:100%;
+				width:100%;
+			}
+			.case .casebottom .left{
+				width:62px;
+				height:62px;
+				background:rgba(0,0,0,.3);
+				display:block;
+				text-align:center;
+				line-height:62px;
+				border-radius:50%;
+				position:absolute;
+				left:-70px;
+				top:50%;
+				/*自己盒子高度的一半*/
+				margin-top:-31px;
+			}
+			.case .casebottom .right{
+				width:62px;
+				height:62px;
+				background:rgba(0,0,0,.3);
+				display:block;
+				text-align:center;
+				line-height:62px;
+				border-radius:50%;
+				position:absolute;
+				right:-70px;
+				top:50%;
+				margin-top:-31px;
+			}
+			.case .casebottom li{
+				float:left;
+				width:324px;
+				height:100%;
+				position:relative;
+				
+			}
+			.case .casebottom li a{
+				display:block;
+				width:100%;
+				height:100%	
+			}
+			li.case_middle{
+				margin:0 40px 0 40px;
+			}
+			.text{
+				width:100%;
+				height:46px;
+				background:rgba(0,0,0,.3);
+				text-align:center;
+				line-height:46px;
+				position:absolute;
+				bottom:0;
+				left:0;
+			}
+			.mask{
+				width:100%;
+				height:100%;
+				background:rgba(0,0,0,.3) url(images/fd.jpg) no-repeat center center ;
+				position:absolute;							
+				top:0;
+				display:none;
+			}
+			.case .casebottom li a:hover .mask{
+				display:block;
+			}
+
+			.media .media_bottom{
+				width:1048px;
+				height:241px;
+				overflow:hidden;
+				margin-top:50px;
+			}
+			.media .media_bottom ul {
+				width:1060px;
+				height:100%;
+			}
+			.media .media_bottom ul li{
+				width:210px;
+				height:80px;
+				float:left;
+				text-align:center;
+				border-bottom:1px dashed #ccc;
+				border-right:1px dashed #ccc;
+				line-height:110px;
+			}
+			.footer{
+				padding-top:50px;	
+				height:170px;
+				background:#212425;
+				margin-top:192px;
+				text-align:center;
+
+			}
+			.footer .subnav a{
+				color:#f0f1f1;
+			}
+			.footer .subnav a:hover{
+				color:#2273cd;
+			}
+			.footer .subnav .split{
+				padding:0 18px;
+				color:#7e7e7e;
+			}	
+			.footer .copyright{
+				color:#787878;
+				padding-top:30px;
+			}
 		</style>
 	</head>
 	<body>
@@ -145,7 +265,7 @@
 		<!--顶部导航栏-->
 		<div class="banner"></div>
 		<!--服务-->
-		<div class="service">
+		<div class="service clearfix">
 			<div class="service_head">
 				<h2>
 					<img src="images/service.png" alt="" />
@@ -178,6 +298,81 @@
 				</ul>
 			</div>
 		</div>
-		
+		<!--经典案例-->
+		<div class="case clearfix">
+			<div class="service_head">
+				<h2>
+					<img src="images/case.png" alt="" />
+				</h2>			
+			</div>
+			<div class="casebottom">
+				<ul>
+					<li>
+						<a href="#">
+							<img src="images/case1.jpg" alt="" />
+							<div class="text">帮助中小企业快速开启阿萨德打撒电子商务</div>
+							<div class="mask"></div>
+						</a>
+					</li>
+					<li class="case_middle">
+						<a href="#">
+							<img src="images/case1.jpg" alt="" />
+							<div class="text">帮助中小企业快速开启阿萨德打撒电子商务</div>
+							<div class="mask"></div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/case1.jpg" alt="" />
+							<div class="text">帮助中小企业快速开启阿萨德打撒电子商务</div>
+							<div class="mask"></div>
+						</a>
+					</li>
+				</ul>
+				<a href="#" class="left"><</a>
+				<a href="#" class="right">></a>
+			</div>
+		</div>
+		<!--合作媒体-->
+		<div class="media">
+			<div class="service_head">
+				<h2>
+					<img src="images/service.png" alt="" />
+				</h2>
+			</div>
+			<div class="media_bottom clearfix">
+				<ul class="clearfix">
+					<li><img src="images/taobao.png" alt="" /></li>
+					<li><img src="images/taobao.png" alt="" /></li>
+					<li><img src="images/taobao.png" alt="" /></li>
+					<li><img src="images/taobao.png" alt="" /></li>
+					<li><img src="images/taobao.png" alt="" /></li>
+					
+					<li><img src="images/taobao.png" alt="" /></li>
+					<li><img src="images/taobao.png" alt="" /></li>
+					<li><img src="images/taobao.png" alt="" /></li>
+					<li><img src="images/taobao.png" alt="" /></li>
+					<li><img src="images/taobao.png" alt="" /></li>
+					<li><img src="images/taobao.png" alt="" /></li>
+					<li><img src="images/taobao.png" alt="" /></li>
+				</ul>
+			</div>
+		</div>
+		<!--页面底部-->
+		<div class="footer">
+			<div class="subnav">
+				<a href="#">shopcmd</a>	<span class="split">|</span>
+				<a href="#">首页</a>	<span class="split">|</span>
+				<a href="#">官网云商城</a><span class="split">|</span>
+				<a href="#">智慧门店</a><span class="split">|</span>
+				<a href="#">营销平台</a><span class="split">|</span>
+				<a href="#">媒体联盟</a><span class="split">|</span>
+				<a href="#">关于我们</a><span class="split">|</span>
+			</div>
+			<p class="copyright">
+				©Copyright 2015 苏州海云网络科技有限公司版权所有 | 苏ICP备15038170号-3
+			</p>
+		</div>
 	</body>
 </html>
+	
